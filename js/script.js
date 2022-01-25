@@ -167,6 +167,27 @@ skipEnd.addEventListener("click", () => {
   }
 });
 
+skipEndSm.addEventListener("click", () => {
+  if (!audio.paused) {
+    audio.pause;
+    if (currentIndex < 6) {
+      initPlay(currentIndex + 1);
+      currentIndex++;
+    } else {
+      initPlay(0);
+      currentIndex = 0;
+    }
+  } else {
+    if (currentIndex < 6) {
+      initPlay(currentIndex + 1);
+      currentIndex++;
+    } else {
+      initPlay(0);
+      currentIndex = 0;
+    }
+  }
+});
+
 skipStart.addEventListener("click", () => {
   if (!audio.paused) {
     audio.pause;
