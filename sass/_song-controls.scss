@@ -1,0 +1,42 @@
+.song-controls {
+  @include flex(center, center);
+
+  div {
+    width: 1.7rem;
+    height: 1.7rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    @include flex(center, center);
+
+    &:nth-child(3) {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    &:first-child,
+    &:last-child {
+      width: 1.3em;
+      height: 1.3rem;
+    }
+  }
+  i {
+    font-size: 1.5rem;
+  }
+}
+
+.controller-small {
+  @include flex(center, center);
+  display: none;
+
+  div {
+    width: 1.7rem;
+    height: 1.7rem;
+    margin: 0 1rem;
+    @include flex(center, center);
+    cursor: pointer;
+  }
+
+  i {
+    font-size: 1.5rem;
+  }
+}

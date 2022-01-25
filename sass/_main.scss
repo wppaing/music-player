@@ -1,0 +1,27 @@
+.main-wrapper {
+  width: 75%;
+  max-width: 1500px;
+  height: 100%;
+
+  @include flex(center, center);
+  margin: 0 auto;
+  overflow: scroll;
+
+  @include respond(desktop) {
+    // width: ;
+  }
+  @include respond(laptop) {
+    flex-direction: column;
+  }
+  @include respond(mobile) {
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  & div:first-child {
+    flex: 1 1 40%;
+  }
+  & div:last-child {
+    flex: 1 1 60%;
+  }
+}

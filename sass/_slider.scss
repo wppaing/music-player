@@ -1,0 +1,33 @@
+.slider-wrapper {
+  @include flex(center, center);
+  span{
+    display: inline-block;
+    margin: 0 10px;
+  }
+}
+.slider-container {
+  position: relative;
+  width: 100%;
+  @include flex(center, center);
+
+  .slider {
+    width: 100%;
+    cursor: pointer;
+    appearance: none;
+    background-color: $black;
+    height: 0.1rem;
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 10px;
+      height: 10px;
+      background-color: $white;
+      border: 2px solid $black;
+      border-radius: 50%;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+}

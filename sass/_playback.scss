@@ -1,0 +1,108 @@
+.playback-wrapper {
+  height: 100%;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  @include flex(center, center);
+  padding: 0.5rem;
+  z-index: 100;
+
+  .title {
+    flex: 1 1 20%;
+
+    @include respond(mobile) {
+      flex: 1 1 60%;
+    }
+    .container {
+      @include flex(center, flex-start);
+    }
+
+    .img-container {
+      width: 50px;
+      height: 50px;
+      margin-right: 1rem;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+
+      img {
+        max-width: 100%;
+      }
+    }
+    .song-info {
+      @include flex(flex-start, center);
+      flex-direction: column;
+
+      h2 {
+        font-size: 1.2rem;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .controls {
+    flex: 1 1 50%;
+
+    .container {
+      @include flex(center, center);
+      width: 95%;
+      margin: 0 auto;
+
+      .song-controls {
+        @include flex(center, center);
+        flex: 1 1 30%;
+        margin-right: 2rem;
+
+        @include respond(mobile) {
+          display: none;
+        }
+      }
+
+      .controller-small {
+        display: none;
+
+        @include respond(mobile) {
+          display: flex;
+        }
+      }
+
+      .slider-wrapper {
+        flex: 1 1 70%;
+
+        @include respond(laptop) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .additionals {
+    flex: 1 1 20%;
+
+    @include respond(tablet) {
+      display: none;
+    }
+
+    .container {
+      @include flex(center, center);
+
+      div {
+        width: 1.7rem;
+        height: 1.7rem;
+        margin: 0 1rem;
+        cursor: pointer;
+
+        &:last-child {
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+      i{
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
