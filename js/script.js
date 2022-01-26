@@ -255,3 +255,14 @@ let showLyric = (path) => {
   audio.onpause = () => lrc.pause();
   audio.onplay = () => lrc.play(audio.currentTime * 1000);
 };
+
+audio.addEventListener("ended", () => {
+  audio.pause();
+  if (currentIndex < 6) {
+    currentIndex++;
+    initPlay(currentIndex);
+  } else {
+    currentIndex = 0;
+    initPlay(currentIndex);
+  }
+});
